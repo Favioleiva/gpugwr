@@ -43,7 +43,7 @@ def select_cuda_major(driver_cuda_major: int, compute_capability: float) -> int:
 def inspect_driver() -> dict:
     """Read actual NVIDIA hardware, driver limit and free memory before installation."""
     summary = command(["nvidia-smi"])
-    match = re.search(r"CUDA Version:\s*(\d+)\.(\d+)", summary)
+    match = re.search(r"CUDA(?: UMD)? Version:\s*(\d+)\.(\d+)", summary)
     if match is None:
         raise RuntimeError("Cannot establish NVIDIA driver's supported CUDA version.")
     query = command(
@@ -76,7 +76,7 @@ def inspect_driver() -> dict:
         "devices": devices,
         "driver_supported_cuda": match[0].split(":")[1].strip(),
         "selected_cuda_major": cuda_major,
-        "nvidia_smi": summary,
+        "driver_version_text": match[0],
     }
 
 
@@ -139,7 +139,13 @@ def main() -> None:
     parser.add_argument("--cpu", action="store_true")
     parser.add_argument("--probe-only", action="store_true")
     arguments = parser.parse_args()
-    record = {"status": "FAIL", "python": sys.version, "platform": platform.platform()}
+    record = {
+        "status": "FAIL",
+        "python": sys.version,
+        "platform": platform.platform(),
+        "probe_only": arguments.probe_only,
+        "installation_executed": not arguments.probe_only,
+    }
     arguments.output.parent.mkdir(parents=True, exist_ok=True)
     try:
         if not re.fullmatch(r"[0-9a-f]{40}", arguments.commit):

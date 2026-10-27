@@ -112,3 +112,26 @@ def test_notebooks_independent_and_pinned():
         assert {"bootstrap", "environment", "experiment", "download"}.issubset(tags)
         commit = notebook["metadata"]["gpugwr_source_commit"]
         assert len(commit) == 40 and set(commit) != {"0"}
+
+
+@pytest.mark.parametrize("label", ["CUDA Version", "CUDA UMD Version"])
+def test_driver_header_variants(label, monkeypatch):
+    """Both NVIDIA driver header formats must select the correct wheel family."""
+    specification = importlib.util.spec_from_file_location(
+        "bootstrap", ROOT / "Colab/bootstrap.py"
+    )
+    module = importlib.util.module_from_spec(specification)
+    specification.loader.exec_module(module)
+
+    def driver_output(arguments, *, cwd=None):
+        """Supply a driver banner and a hardware row without requiring a GPU."""
+        if len(arguments) == 1:
+            return f"NVIDIA-SMI | {label}: 13.3 |"
+        return "0, NVIDIA GeForce RTX 3060, 610.88, 12288, 11000, 8.6"
+
+    monkeypatch.setattr(module, "command", driver_output)
+    record = module.inspect_driver()
+    assert record["driver_supported_cuda"] == "13.3"
+    assert record["selected_cuda_major"] == 13
+    assert record["devices"][0]["vram_mib"] == 12288
+    assert "nvidia_smi" not in record
