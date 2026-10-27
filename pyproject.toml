@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpuGWR"
+version = "0.4.0"
+description = "Validated CPU and CUDA Geographically Weighted Regression"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "Favio Leiva"}]
+dependencies = ["numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "pyproj>=3.6"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+
+[project.urls]
+Repository = "https://github.com/Favioleiva/gpugwr"
+Documentation = "https://github.com/Favioleiva/gpugwr/tree/main/Documentation"
+
+[project.optional-dependencies]
+geo = ["geopandas>=1.0"]
+test = ["pytest>=8", "threadpoolctl>=3", "geopandas>=1.0"]
+gpu = ["cupy-cuda13x[ctk]>=14.1,<15"]
+cuda12 = ["cupy-cuda12x[ctk]>=14.1,<15"]
+cuda13 = ["cupy-cuda13x[ctk]>=14.1,<15"]
+notebook = ["geopandas>=1.0", "threadpoolctl>=3", "ipython>=8"]
+
+[tool.setuptools]
+py-modules = ["gpuGWR"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "Scripts"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-exclude = ["Reference", ".venv-contract01", ".venv-clean"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

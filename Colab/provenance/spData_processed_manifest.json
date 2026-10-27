@@ -1,0 +1,42 @@
+{
+  "conversion": "Base R; all rows retained; 17 significant digits; exact numeric roundtrip verified",
+  "script": "Scripts/prepare_contract02_external.R",
+  "script_sha256": "6ba759ff8768aca42f814b839acf525d0a182890980875b355f088ae9e4dcf8c",
+  "files": [
+    {
+      "local_path": "Data/External/Processed/baltimore.csv",
+      "sha256": "61bae633e358eb6e1ce157692935201441c34ded0f96ea8865115bca7ddea2c4",
+      "bytes": 23191
+    },
+    {
+      "local_path": "Data/External/Processed/baltimore_columns.csv",
+      "sha256": "a00322fcd5d7d8b1b64d90b8fb70cbf387dc643e961085f4fbd40891d406e066",
+      "bytes": 381
+    },
+    {
+      "local_path": "Data/External/Processed/boston.csv",
+      "sha256": "c52d9694528fdadf193a4504d20b6622746cf394e34ea9681ab6acfb87cb2bf3",
+      "bytes": 166239
+    },
+    {
+      "local_path": "Data/External/Processed/boston_columns.csv",
+      "sha256": "32ef53ae93729b7b7d904634ef017db12e555d45a674ad703a5a5301b050ffd8",
+      "bytes": 449
+    },
+    {
+      "local_path": "Data/External/Processed/columbus.csv",
+      "sha256": "273794d2045fe2c71552a01d7d5959f3f84fb3dcacd250deed7dc5b9bed7eeb7",
+      "bytes": 13451
+    },
+    {
+      "local_path": "Data/External/Processed/columbus_columns.csv",
+      "sha256": "fa22b72a3df72a12d5a2d3864ee7d33f985be6f4db1f7ad0b904265bd0b233d0",
+      "bytes": 511
+    },
+    {
+      "local_path": "Data/External/Processed/r_session.txt",
+      "sha256": "50c9d8438678b6f51604fc603f0b181e16afc2357e871e1fcca859e202be6045",
+      "bytes": 414
+    }
+  ]
+}

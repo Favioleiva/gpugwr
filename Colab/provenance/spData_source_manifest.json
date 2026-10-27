@@ -1,0 +1,77 @@
+{
+  "acquired_utc": "2026-10-27T14:38:59.110355+00:00",
+  "method": "GitHub connector; Git blob verified before saving",
+  "license": "CC0 (spData DESCRIPTION)",
+  "files": [
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "data/baltimore.rda",
+      "git_blob_sha": "4046b32d7edd068053c9e1aed903af72851a6d82",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/data/baltimore.rda",
+      "local_path": "Data/External/Raw/spData/data/baltimore.rda",
+      "bytes": 4448,
+      "sha256": "cb4941dab7256b1bb82f56b013d50eaaafb7fa913449c44bbcf418766a4d03e4"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "data/boston.rda",
+      "git_blob_sha": "51d334b3cb16cd194103bc1a19acff2552ea752c",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/data/boston.rda",
+      "local_path": "Data/External/Raw/spData/data/boston.rda",
+      "bytes": 33256,
+      "sha256": "11fddb6e51c7bbe37dcb0b746c1eb1621f107498b5b844d299ac59473e3a6a85"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "data/columbus.rda",
+      "git_blob_sha": "3e03d641296969800b22ae32c6681237de0e81d2",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/data/columbus.rda",
+      "local_path": "Data/External/Raw/spData/data/columbus.rda",
+      "bytes": 13636,
+      "sha256": "fa0d27efede5828239e85387ec16729a9662e22c41e677e07b15bf2361d36474"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "DESCRIPTION",
+      "git_blob_sha": "37a31153294563ce9baf471a328fe058129a1e07",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/DESCRIPTION",
+      "local_path": "Data/External/Raw/spData/DESCRIPTION",
+      "bytes": 1645,
+      "sha256": "6f800576e4ff7df8e2afde83c019a1f76e2d788e8877e7eb05ec371b5de9a1f5"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "R/baltimore.R",
+      "git_blob_sha": "9bb7fd1db622e2c6ef66282e45cf0209705ff19e",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/R/baltimore.R",
+      "local_path": "Data/External/Raw/spData/R/baltimore.R",
+      "bytes": 1690,
+      "sha256": "cf21a5a1b79011cbc44675f3b481035b811a0841f10d485c1a012dc730f6c7b4"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "R/boston.R",
+      "git_blob_sha": "6211605b13fc91d9724bfcb868e339e000eca26b",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/R/boston.R",
+      "local_path": "Data/External/Raw/spData/R/boston.R",
+      "bytes": 5998,
+      "sha256": "4c4014e6d79007c9b487e3f0e38f15d4f7ef61cede11940ad23bfc46c3ae0833"
+    },
+    {
+      "repository": "Nowosad/spData",
+      "commit": "6d9c2a8d087822463f6571016826fe45efa749c0",
+      "path": "R/columbus.R",
+      "git_blob_sha": "237ba35fe3294366fe483fa837882689d51f8a30",
+      "source_url": "https://github.com/Nowosad/spData/blob/6d9c2a8d087822463f6571016826fe45efa749c0/R/columbus.R",
+      "local_path": "Data/External/Raw/spData/R/columbus.R",
+      "bytes": 3027,
+      "sha256": "ab54479129071788101f9fda1638f218465dd1aa8e48228b22cc58d3d8429d1c"
+    }
+  ]
+}

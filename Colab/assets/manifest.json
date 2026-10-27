@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-10,
+  "assets": {
+    "georgia.csv": {
+      "path": "Colab/assets/georgia.csv",
+      "source": "Data/Raw/GData_utm.csv",
+      "sha256": "f3a54d25d3cb578e3284ba6701e3bc2ba38ce749997e006ed72d6789333fcebe",
+      "bytes": 14288,
+      "license": "BSD-3-Clause (libpysal)"
+    },
+    "georgia.npz": {
+      "path": "Colab/assets/georgia.npz",
+      "source": "Results/Canonical/results.npz",
+      "sha256": "6cc8a58cebb0cf802210c6433f64602fe2866ba26a1a14c041e252db04877092",
+      "bytes": 593645,
+      "license": "Project validation output"
+    },
+    "columbus.csv": {
+      "path": "Colab/assets/columbus.csv",
+      "source": "Data/External/Processed/columbus.csv",
+      "sha256": "273794d2045fe2c71552a01d7d5959f3f84fb3dcacd250deed7dc5b9bed7eeb7",
+      "bytes": 13451,
+      "license": "CC0 (spData 2.3.5)"
+    },
+    "columbus.npz": {
+      "path": "Colab/assets/columbus.npz",
+      "source": "Results/Contract02/External/columbus/mgwr.npz",
+      "sha256": "4c1ebfcbc9cba4941d6bf863067649bc5a6cafd5e1d8c91903e2b93195088a2d",
+      "bytes": 62657,
+      "license": "Project validation output"
+    },
+    "baltimore.csv": {
+      "path": "Colab/assets/baltimore.csv",
+      "source": "Data/External/Processed/baltimore.csv",
+      "sha256": "61bae633e358eb6e1ce157692935201441c34ded0f96ea8865115bca7ddea2c4",
+      "bytes": 23191,
+      "license": "CC0 (spData 2.3.5)"
+    },
+    "baltimore.npz": {
+      "path": "Colab/assets/baltimore.npz",
+      "source": "Results/Contract02/External/baltimore/mgwr.npz",
+      "sha256": "40b6f3fdd4d034a7502d61bfd374e93ea22720a32e4511fed6ec18d17d3bdae5",
+      "bytes": 531882,
+      "license": "Project validation output"
+    },
+    "boston.csv": {
+      "path": "Colab/assets/boston.csv",
+      "source": "Data/External/Processed/boston.csv",
+      "sha256": "c52d9694528fdadf193a4504d20b6622746cf394e34ea9681ab6acfb87cb2bf3",
+      "bytes": 166239,
+      "license": "CC0 (spData 2.3.5)"
+    },
+    "boston.npz": {
+      "path": "Colab/assets/boston.npz",
+      "source": "Results/Contract02/External/boston/mgwr.npz",
+      "sha256": "52b5564044de912407c2f5bad8c0e9d224738ef49c4845a120a3fc1f2c643152",
+      "bytes": 2730619,
+      "license": "Project validation output"
+    },
+    "brazil.geojson": {
+      "url": "https://gist.github.com/cmg777/fe858a48ff7191b9c2a3aff7d6ddfd6f/raw/858272ce03d1b818429df3e7cead9e03ef7ec3b9/homicidesBRA_WD_20190318.geojson",
+      "source": "Data/Addendum001/brazil/homicidesBRA_WD_20190318.geojson",
+      "sha256": "0d36191a0849acf5f7312e2361ddeeb40b8563feda341f8c2fb43f0aaa325022",
+      "bytes": 34807331,
+      "license": "Unspecified upstream; source and derived inputs excluded from publication",
+      "remote_identity_verified": false
+    },
+    "brazil_model1.npz": {
+      "path": "Colab/assets/brazil_model1.npz",
+      "source": "Reports/Contract03/Addendum001/BrazilLiteral/Validation/model1_mgwr.npz",
+      "sha256": "e5cababca376f9ac54d3b3465312ee2d8a867fb10a2e2e8ef7ba97f691613ed0",
+      "bytes": 2522172,
+      "license": "Project validation output"
+    },
+    "brazil_model2.npz": {
+      "path": "Colab/assets/brazil_model2.npz",
+      "source": "Reports/Contract03/Addendum001/BrazilLiteral/Validation/model2_mgwr.npz",
+      "sha256": "5c7690ec61a0c0268dc16e62ffaea5eedc90fccdde4fadf55d3048b2f6273650",
+      "bytes": 2179622,
+      "license": "Project validation output"
+    },
+    "brazil_model3.npz": {
+      "path": "Colab/assets/brazil_model3.npz",
+      "source": "Reports/Contract03/Addendum001/BrazilLiteral/Validation/model3_mgwr.npz",
+      "sha256": "e44ef966d62901ba06c400e13048d08b5ecdbdc6135ad985640ef60e53156141",
+      "bytes": 2180677,
+      "license": "Project validation output"
+    },
+    "brazil_model4.npz": {
+      "path": "Colab/assets/brazil_model4.npz",
+      "source": "Reports/Contract03/Addendum001/BrazilLiteral/Validation/model4_mgwr.npz",
+      "sha256": "cafb68c150421a1b0192e7dacab9c3b2bf8d2ac928834b5a4a6f54d65434e506",
+      "bytes": 2180227,
+      "license": "Project validation output"
+    },
+    "georgia_monte_carlo_500.npz": {
+      "path": "Colab/assets/georgia_monte_carlo_500.npz",
+      "source": "Reports/Contract03/Addendum001/Benchmarks/500/cpu_1/spatial_variability.npz",
+      "sha256": "9fdd5dbc2814e24bdad64a9d51865b85ef77a0b05849bd3af4818edfa23422f7",
+      "bytes": 135844,
+      "license": "Project validated CPU output; mgwr conventions verified in Contract 03"
+    }
+  },
+  "cases": {
+    "georgia": {
+      "observations": 159,
+      "id_column": "AreaKey",
+      "dependent": "PctBach",
+      "independent": [
+        "PctFB",
+        "PctBlack",
+        "PctRural"
+      ],
+      "coordinates": [
+        "X",
+        "Y"
+      ],
+      "standardize": true,
+      "coordinate_description": "Original UTM X/Y; no unverified EPSG assigned.",
+      "data": "georgia.csv",
+      "reference": "georgia.npz"
+    },
+    "columbus": {
+      "name": "columbus",
+      "observations": 49,
+      "dependent": "CRIME",
+      "independent": [
+        "INC",
+        "HOVAL"
+      ],
+      "coordinates": [
+        "X",
+        "Y"
+      ],
+      "crs": null,
+      "coordinate_description": "Original arbitrary Cartesian digitizing units, not polygon coordinates; no geodetic CRS or EPSG is identified.",
+      "source": "https://jakubnowosad.com/spData/reference/columbus.html",
+      "license": "CC0, declared by spData DESCRIPTION at the pinned commit",
+      "reference": "columbus.npz",
+      "prior_gwr_example": "https://rsbivand.github.io/spgwr/reference/gwr.html",
+      "id_column": "observation_id",
+      "standardize": false,
+      "bandwidth_bounds": [
+        10,
+        49
+      ],
+      "data": "columbus.csv"
+    },
+    "baltimore": {
+      "name": "baltimore",
+      "observations": 211,
+      "dependent": "PRICE",
+      "independent": [
+        "NROOM",
+        "AGE",
+        "SQFT"
+      ],
+      "coordinates": [
+        "X",
+        "Y"
+      ],
+      "crs": null,
+      "coordinate_description": "Original Maryland grid X/Y; projection and physical units not identified in the distribution. Cartesian distances use those original grid units.",
+      "source": "https://jakubnowosad.com/spData/reference/baltimore.html",
+      "license": "CC0, declared by spData DESCRIPTION at the pinned commit",
+      "reference": "baltimore.npz",
+      "prior_gwr_example": null,
+      "selection_rationale": "Independent published empirical spatial hedonic data; no claim that this exact specification reproduces a published GWR study.",
+      "id_column": "observation_id",
+      "standardize": false,
+      "bandwidth_bounds": [
+        10,
+        211
+      ],
+      "data": "baltimore.csv"
+    },
+    "boston": {
+      "name": "boston",
+      "observations": 506,
+      "dependent": "CMEDV",
+      "independent": [
+        "RM",
+        "AGE",
+        "DIS"
+      ],
+      "coordinates": [
+        "X",
+        "Y"
+      ],
+      "crs": null,
+      "coordinate_description": "Author-supplied boston.utm tract points in UTM zone 19; original object has no datum/CRS attribute, so no EPSG is invented. LON/LAT are retained but not used for distances.",
+      "source": "https://jakubnowosad.com/spData/reference/boston.html",
+      "license": "CC0, declared by spData DESCRIPTION at the pinned commit",
+      "reference": "boston.npz",
+      "prior_gwr_example": "https://lbb220.r-universe.dev/GWmodel/doc/manual.html#gwr.scalable",
+      "selection_rationale": "Boston is used in GWmodel's official scalable GWR example. This validation uses basic GWR with three continuous predictors and corrected response, not a replication of that algorithm or formula.",
+      "id_column": "observation_id",
+      "standardize": false,
+      "bandwidth_bounds": [
+        10,
+        506
+      ],
+      "data": "boston.csv"
+    },
+    "brazil": {
+      "notebook": "https://colab.research.google.com/drive/19COBTQysC1UtsKh4cMxWsDFQm_eU4BBV",
+      "source_url": "https://gist.github.com/cmg777/fe858a48ff7191b9c2a3aff7d6ddfd6f/raw/858272ce03d1b818429df3e7cead9e03ef7ec3b9/homicidesBRA_WD_20190318.geojson",
+      "expected_observations": 5562,
+      "dependent": "DfHRElc",
+      "coordinates": [
+        "x_coor",
+        "y_coor"
+      ],
+      "coordinate_convention": "Centroids of original EPSG:4326 geometries; Euclidean degrees, exactly as active GWR calls in notebook",
+      "geographic_correction": false,
+      "standardize": false,
+      "kernel": "bisquare",
+      "fixed": false,
+      "bandwidth": 1345,
+      "selection_executed_in_notebook": false,
+      "models": [
+        {
+          "name": "model1",
+          "independent": [
+            "margin",
+            "stalign",
+            "Abstntn",
+            "PMDB",
+            "PSDB",
+            "PT",
+            "lppdnst",
+            "lpctppy",
+            "GINI",
+            "IDHM",
+            "HHsinpr",
+            "Ocp18ml",
+            "CoverBF"
+          ],
+          "reference": "brazil_model1.npz"
+        },
+        {
+          "name": "model2",
+          "independent": [
+            "margin",
+            "stalign",
+            "Abstntn",
+            "PMDB",
+            "lppdnst",
+            "lpctppy",
+            "GINI",
+            "IDHM",
+            "HHsinpr",
+            "Ocp18ml",
+            "CoverBF"
+          ],
+          "reference": "brazil_model2.npz"
+        },
+        {
+          "name": "model3",
+          "independent": [
+            "margin",
+            "stalign",
+            "Abstntn",
+            "PSDB",
+            "lppdnst",
+            "lpctppy",
+            "GINI",
+            "IDHM",
+            "HHsinpr",
+            "Ocp18ml",
+            "CoverBF"
+          ],
+          "reference": "brazil_model3.npz"
+        },
+        {
+          "name": "model4",
+          "independent": [
+            "margin",
+            "stalign",
+            "Abstntn",
+            "PT",
+            "lppdnst",
+            "lpctppy",
+            "GINI",
+            "IDHM",
+            "HHsinpr",
+            "Ocp18ml",
+            "CoverBF"
+          ],
+          "reference": "brazil_model4.npz"
+        }
+      ],
+      "observations": 5562,
+      "id_column": "COD_MUN_I",
+      "data": "brazil.geojson"
+    }
+  },
+  "monte_carlo": {
+    "reference": "georgia_monte_carlo_500.npz",
+    "iterations": 500,
+    "seed": 5536
+  }
+}

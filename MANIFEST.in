@@ -1,0 +1,9 @@
+include LICENSE
+include THIRD_PARTY_NOTICES.md
+include README.md
+recursive-include src *.py
+prune Reports
+prune Results
+prune Data
+prune Reference
+prune Publication
