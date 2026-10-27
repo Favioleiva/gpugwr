@@ -1,0 +1,4 @@
+* text=auto eol=lf
+Colab/assets/* -text
+Colab/provenance/* -text
+Reference/** -text
