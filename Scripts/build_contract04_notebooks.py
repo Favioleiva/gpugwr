@@ -117,6 +117,20 @@ def common_cells(title: str, commit: str) -> list[dict]:
                 )
             print((OUTPUT / "bootstrap.log").read_text("utf-8")[-12000:])
             completed.check_returncode()
+            from importlib.metadata import version
+
+            stale_modules = []
+            for package_name in ("numpy", "scipy", "pandas", "pyproj"):
+                loaded_module = sys.modules.get(package_name)
+                if loaded_module is not None:
+                    loaded_version = getattr(loaded_module, "__version__", None)
+                    if loaded_version != version(package_name):
+                        stale_modules.append(package_name)
+            if stale_modules:
+                raise RuntimeError(
+                    "Restart the Python runtime and rerun all cells; "
+                    "already-loaded packages changed: " + str(stale_modules)
+                )
             ''',
             "bootstrap",
         ),
