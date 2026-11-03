@@ -56,3 +56,17 @@ Colab hardware, memory and runtime availability vary.
 Local CUDA tests cannot substitute for fresh Colab verification. Missing
 resources, memory errors, dependency conflicts and numerical mismatches stop
 execution visibly; they do not trigger CPU fallback or tolerance changes.
+
+
+### Colab dependency correction (2026-11-03)
+
+A reported Python 3.13 Colab A100 installation stopped at `pip check`: the
+original pandas 3.0.2 pin conflicted with google-colab's pandas 2.2.3 requirement
+and RAPIDS' pandas <2.4 constraint. The scientific stack now pins pandas 2.2.3
+and includes Jedi 0.19.2 for IPython. The strict dependency check remains enabled.
+No estimator, reference data, or numerical tolerance was changed.
+
+Open the updated notebook from GitHub in a fresh GPU runtime. A saved copy of an
+older notebook still pins the older installer. If the notebook detects packages
+already imported at different versions, restart the Python session and rerun all
+cells. Preserve the failed notebook as run01 and the retry as run02.

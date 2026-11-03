@@ -2,9 +2,12 @@
 # Python 3.12 is locally tested; Colab Linux is not yet verified.
 numpy==2.4.4
 scipy==1.16.3
-pandas==3.0.2
+# Match google-colab and the preinstalled RAPIDS pandas constraint.
+pandas==2.2.3
 pyproj==3.7.2
 geopandas==1.1.4
 shapely==2.1.2
 pyogrio==0.13.0
 threadpoolctl==3.6.0
+# IPython requires Jedi; some Colab images omit it.
+jedi==0.19.2
